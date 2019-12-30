@@ -16,12 +16,9 @@ ADD . /app
 
 RUN pip install -r requirements.txt
 
-# Define environment variable
-ENV DOGE_TOKEN NjU4NTc1ODAxNTgyNjE2NTc2.XgBwkg.a8AQvl3KDlNgJn5EIuYAUjGzwcY
-
-RUN apt-get install -y supervisor
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD ["/usr/bin/supervisord"]
+# RUN apt-get install -y supervisor
+# COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+# CMD ["/usr/bin/supervisord"]
 
 # Run app.py when the container launches
 # CMD ["python", "doge.py"]
