@@ -51,7 +51,7 @@ async def doge(context, arg):
         else:
             await context.send(f'No results for query "{arg}"')
     else:
-        await context.send('User is not in a channel.')
+        await context.send('User is not in a voice channel.')
 
 @client.command(
     name='dogelist',

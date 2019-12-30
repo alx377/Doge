@@ -16,9 +16,6 @@ ADD . /app
 
 RUN pip install -r requirements.txt
 
-# RUN apt-get install -y supervisor
-# COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-# CMD ["/usr/bin/supervisord"]
-
-# Run app.py when the container launches
-# CMD ["python", "doge.py"]
+RUN apt-get install -y supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+CMD ["/usr/bin/supervisord"]
